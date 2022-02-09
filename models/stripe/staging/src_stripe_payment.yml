@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: STRIPE
+    database: alpha-sense-training
+    schema: dbt_eaiken
+    tables:
+      - name: scr_stripe_payment
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
